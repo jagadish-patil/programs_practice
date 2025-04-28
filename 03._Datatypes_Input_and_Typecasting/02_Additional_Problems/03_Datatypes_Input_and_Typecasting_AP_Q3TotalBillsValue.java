@@ -1,39 +1,46 @@
 /*
 
-Q2. Number of bills
+Q3. Total Bills Value
 
 Problem Description
 
-Given total bills amount and amount of a single bill. Print number of bills.
+Given the value of a single bill and the number of bills you received, 
+print the total value of the bills.
 
-Note : The total amount is equally splitted in all bills. The number of bills 
-should be an integer value.
+Note: The value of all the bills are same
 
-Input Format
-
-The first line contains a real number N denoting the total budget.
-The second line contains an integer M denoting the value of a single bill.
-
-Output Format
-
-Print in a single line denoting the total number of bills that can fit in the 
-total budget.
 
 Problem Constraints
 
-1 <= N <= 10000
+1 <= N <= 100
 1 <= M <= 100
+
+
+Input Format
+
+The first line of the input is an integer N denoting the value of a single bill.
+The second line of the input is an integer M denoting the number of bills.
+
+
+Output Format
+
+Print in a single line denoting the total value of bills.
+
 
 Example Input
 
 Input:-
-126.3
-5
+12
+10
+
 
 Example Output
 
 Output:-
-25
+120
+
+
+Example Explanation
 
 Note: The problem constraints mean that when we test your code, 
 the test cases used in the backend can have input values only within 
@@ -48,17 +55,15 @@ import java.util.*;
 class Main {
 	public static void main(String args[]) {
 		// Your code goes here
-		double N;
-		int M, output;
+		int N, M, output;
 		Scanner sc = new Scanner(System.in);
 		
-		N = sc.nextDouble();
+		N = sc.nextInt();
 		M = sc.nextInt();
 		
-		output = (int) N / M;
+		output = N * M;
 		
 		System.out.println(output);
-		// System.out.println(Math.round(output));
 		
 	}
 }
